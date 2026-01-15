@@ -12,6 +12,19 @@
     display: flex;
 
 }
+.btn-primary{
+    background-color: #FF900E;
+    color: white;
+    border-style: none;
+    border-radius: 8px;
+    padding: 20px 25px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+/* dark 1 */
+.text-dark-gray{
+    color: #131313;
+}
 /* dark 2 */
 .text-gray{
    color: #424242;
@@ -30,8 +43,13 @@
 /* header style */
 
 /* navbar related style */
+.brand{
+    font-weight:700 ;
+    font-size: 3rem;
+}
 .nav-bar{
     justify-content: space-between;
+    align-items: center;
 }
 .nav-item{
     list-style: none;
@@ -47,4 +65,28 @@ font-weight: 500;
     max-width: 1400px;
     margin: 0 auto;
 
+}
+/* banner style */
+.banner-content{
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+.banner-title{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.banner-image{
+    width: 100%;
+}
+/* responsive media qauary */
+@media screen and (max-width:576px) {
+    .nav-bar, .nav-links{
+     flex-direction: column;
+    }
+    .banner-image{
+        width: 100%;
+    }
 }
