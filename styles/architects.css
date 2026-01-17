@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
 
 .work-sans-font {
     font-family: "Work Sans", sans-serif;
@@ -46,13 +49,15 @@
 .bg-2 {
     background-color: rgba(255, 244, 231, 1);
 }
-.text-primary{
+
+.text-primary {
     color: #FF900E;
 }
 
 main>section {
     margin-top: 130px;
 }
+
 .section-title {
     font-size: 2.8rem;
     font-weight: 700;
@@ -134,9 +139,63 @@ main {
     max-width: 530px;
 }
 
-#quick-list{
+#quick-list {
     font-weight: 500;
 }
+
+/* some-fact-related style */
+.fact-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.fact-card {
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    width: 240px;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fact-number {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #727272;
+}
+
+.fact-description {
+    max-width: 542px;
+    margin-bottom: 80px;
+
+}
+
+/* sponsored related info */
+.sponsored-info {
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsored-company {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsored-company img {
+    filter: grayscale(100%);
+}
+
 
 
 
@@ -156,20 +215,45 @@ main {
     .banner-image {
         width: 100%;
     }
-    
-    .team-img-container{
-           grid-template-columns: repeat(1, 1fr);
-   }
-   .team-img-container img{
-    width: 100%;
-   }
 
-   
+    .team-img-container,
+    .fact-container,
+    .sponsored-company {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .fact-container {
+        justify-items: center;
+        gap: 24px;
+    }
+
+    .sponsored-company {
+        justify-items: center;
+        gap: 40px;
+    }
+
+    .team-img-container img {
+        width: 100%;
+    }
+
+
 }
+
 /* medium device */
 @media screen and (min-width:576px) and (max-width:992px) {
-    .teams{
+    .teams {
         flex-direction: column;
     }
-    
+
+    .fact-container,
+    .sponsored-company {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .some-fact,.sponsored-company {
+        justify-items: center;
+        gap: 50px;
+    }
+
+
 }
