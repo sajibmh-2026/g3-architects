@@ -231,6 +231,15 @@ main {
 .sponsored-company img {
     filter: grayscale(100%);
 }
+/* footer section style */
+footer{
+    max-width: 1400px;
+    text-align: center;
+    padding: 38px;
+    margin: 130px auto;
+    margin-bottom: 50px;
+    border-radius: 8px;
+}
 
 
 
